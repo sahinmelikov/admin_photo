@@ -42,7 +42,7 @@ namespace WebFrontToBack.Areas.Admin.Controllers
                 return View();
             }
 
-            if (workVM.Photo.ContentType.Contains("image/"))
+            if (!workVM.Photo.ContentType.Contains("image/"))
             {
                 ModelState.AddModelError("Phote", "image type to enter!");
                 return View();

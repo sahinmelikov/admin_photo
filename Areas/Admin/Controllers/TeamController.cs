@@ -41,7 +41,7 @@ namespace WebFrontToBack.Areas.Admin.Controllers
                 return View();
             }
 
-            if (CreateTeamMemberVM.Photo.ContentType.Contains("image/"))
+            if (!CreateTeamMemberVM.Photo.ContentType.Contains("image/"))
             {
                 ModelState.AddModelError("Phote", "image type to enter!");
                 return View();

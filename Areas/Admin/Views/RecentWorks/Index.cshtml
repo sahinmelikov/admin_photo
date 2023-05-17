@@ -32,6 +32,9 @@
                                     @item.Name
                                 </td>
                                 <td>
+                                    <img src="~/assets/img/@item.ImagePath">
+                                </td>
+                                <td>
                                     <a class="btn btn-primary text-light">Detail</a>
                                     <a class="btn btn-warning text-light" asp-area="Admin" asp-controller="RecentWorks" asp-action="Update" asp-route-Id="@item.Id">Update</a>
                                     <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="RecentWorks" asp-action="Delete" asp-route-Id="@item.Id">Delete</a>
