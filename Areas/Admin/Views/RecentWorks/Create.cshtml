@@ -1,0 +1,27 @@
+﻿@using WebFrontToBack.Areas.Admin.ViewModels;
+@model CreateREcetWorkVM
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+
+            <form class="forms-sample" method="post" enctype="multipart/form-data action="create">
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" placeholder="Works">
+                    <span class="text text-danger" asp-validation-for="Name"></span>
+                    <label asp-for="Description"></label>
+                    <input asp-for="Description" class="form-control" placeholder="Profession">
+                    <span class="text text-danger" asp-validation-for="Description"></span>
+                    <label asp-for="Photo"></label>
+                    <input asp-for="Photo" class="form-control" placeholder="Price">
+                    <span class="text text-danger" asp-validation-for="Photo"></span>
+
+                </div>
+                <button type="submit" class="btn btn-primary me-2 text-light">Create</button>
+                <button class="btn btn-light" asp-action="Index">Go back</button>
+
+            </form>
+        </div>
+    </div>
+</div>

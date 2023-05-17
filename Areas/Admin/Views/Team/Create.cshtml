@@ -1,0 +1,26 @@
+﻿@using WebFrontToBack.Areas.Admin.ViewModels;
+@model CreateTeamMemberVM
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+
+            <form class="forms-sample" method="post" enctype="multipart/form-data" action="create">
+                <div class="form-group">
+                    <label asp-for="FullName"></label>
+                    <input asp-for="FullName" class="form-control" placeholder="TeamMember">
+                    <span class="text text-danger" asp-validation-for="FullName"></span>
+                    <label asp-for="Profession"></label>
+                    <input asp-for="Profession" class="form-control" placeholder="Profession">
+                    <span class="text text-danger" asp-validation-for="Profession"></span>
+                    <label asp-for="Photo"></label>
+                    <input asp-for="Photo" class="form-control" placeholder="Price">
+                    <span class="text text-danger" asp-validation-for="Photo"></span>
+                    
+                </div>
+                <button type="submit" class="btn btn-primary me-2 text-light">Create</button>
+                <button class="btn btn-light" asp-action="Index">Go back</button>
+
+            </form>
+        </div>
+    </div>
+</div>
